@@ -52,6 +52,7 @@ if($status==false){
   //５．index2.phpへリダイレクト
   header('Location: index2.php');//ヘッダーロケーション（リダイレクト）
 }
+
 ?>
 
 

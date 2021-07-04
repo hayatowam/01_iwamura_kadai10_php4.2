@@ -42,3 +42,14 @@ function redirect($file_name){
     exit();
 }
 // 引数を関数として使うことができる
+
+//ログインチェック
+// エラーが出る→セッションに保持されているIDとセッションIDが異なっている状況
+function loginCheck(){
+    if( $_SESSION['chk_ssid'] != session_id() ){
+      exit('LOGIN ERROR');
+    }else{
+      session_regenerate_id(true); //新しいセッションIDを取り直す。ログインIDACTで取得したIDも更新される
+      $_SESSION['chk_ssid'] = session_id();
+    }
+  }

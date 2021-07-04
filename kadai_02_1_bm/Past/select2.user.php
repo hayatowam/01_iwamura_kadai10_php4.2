@@ -1,8 +1,4 @@
 <?php
-// セッションを始める
-session_start();
-
-
 // データ取得し表示するためのPHP
 //1.  DB接続します
 
@@ -19,12 +15,9 @@ session_start();
   require_once('funcs2.php');
   $pdo = db_conn();
   $db_table = "gs_bm_table";
-
-  
   // loginCheck();
   $user_name = $_SESSION['name'];
   $kanri_flg = $_SESSION['kanri_flg'];
-
   // try {
   //   //Password:MAMP='root',XAMPP=''
   //   $pdo = new PDO('mysql:dbname=book_review;charset=utf8;host=localhost','root','root');
@@ -76,7 +69,7 @@ if($status==false) {
   }
 }
 
-// var_dump($result['name']);
+var_dump($result['name']);
 // exit();
 
 // よく使う関数はfuncs.phpにまとめておくとGood。
@@ -147,25 +140,10 @@ if($status==false) {
   <nav class="navbar navbar-default">
     <div class="container-fluid">
       <div class="navbar-header">
-        <div class="title">ブックマークアプリ</div>
-        <div class="page_title">ブックマーク一覧</div>
-        <div class="logi_name" >
-          ログイン者：
-          <?php if ($kanri_flg == null ) { ?>
-              ログインされていません
-            <?php }else{?>
-              <?= $user_name ?>
-            <?php }?>   
-        </div>  
-        <a class="navbar-brand" href="index2.php">ブックマークデータ登録</a>
-        <?php if ($kanri_flg == 1 ) { ?>
-            <a class="navbar-brand" href="user_index2.php">ユーザー登録</a><!-- ここを追記 -->
-            <a class="navbar-brand" href="select_user.php">ユーザー一覧</a><!-- ここを追記 -->
-        <?php }?>   
-        <a class="navbar-brand" href="login2.php">ログイン</a>
-        <a class="navbar-brand" href="logout2.php">ログアウト</a><!-- ここを追記 -->    
+      <a class="navbar-brand" href="index2.php">データ登録</a>
       </div>
     </div>
+  </nav>
 </header>
 <!-- Head[End] -->
 
