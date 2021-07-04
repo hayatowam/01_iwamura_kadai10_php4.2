@@ -16,10 +16,10 @@ function db_conn(){
         // ------------------
         // ローカル用
         // ------------------
-        // $db_name = "book_review";    //データベース名
-        // $db_id   = "root";      //アカウント名
-        // $db_pw   = "root";      //パスワード：XAMPPはパスワード無しに修正してください。
-        // $db_host = "localhost"; //DBホスト
+        $db_name = "book_review";    //データベース名
+        $db_id   = "root";      //アカウント名
+        $db_pw   = "root";      //パスワード：XAMPPはパスワード無しに修正してください。
+        $db_host = "localhost"; //DBホスト
 
 
         
