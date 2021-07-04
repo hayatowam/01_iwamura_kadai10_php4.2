@@ -20,7 +20,6 @@ session_start();
   $pdo = db_conn();
   $db_table = "gs_bm_table";
 
-  
   // loginCheck();
   $user_name = $_SESSION['name'];
   $kanri_flg = $_SESSION['kanri_flg'];

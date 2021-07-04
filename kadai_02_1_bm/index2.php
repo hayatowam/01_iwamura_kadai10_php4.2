@@ -13,7 +13,7 @@ $stmt = $pdo->prepare("SELECT * FROM gs_user_table");
 $status = $stmt->execute();
 
 //ログインチェック
-// loginCheck();
+// loginCheck(); //ログインしないと見れないページに貼る
 $user_name = $_SESSION['name'];
 $kanri_flg = $_SESSION['kanri_flg'];
 

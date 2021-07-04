@@ -21,7 +21,7 @@
   </nav>
 </header>
 <h2>ログインフォーム</h2>
-<!-- lLOGINogin_act.php は認証処理用のPHPです。 -->
+<!-- lLOGINogin_act2.php は認証処理用のPHPです。 -->
 <form name="form1" action="login_act2.php" method="post">
 ID:<input type="text" name="lid" />
 PW:<input type="password" name="lpw" />

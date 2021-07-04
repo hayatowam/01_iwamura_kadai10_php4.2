@@ -34,28 +34,18 @@ $val = $stmt->fetch();         //1レコードだけ取得する方法
 //$count = $stmt->fetchColumn(); //SELECT COUNT(*)で使用可能()
 
 //5. 該当レコードがあればSESSIONに値を代入
-
-//   if( password_verify($lpw, $val["lpw"]) ){
-//   //Login成功時
-//   $_SESSION['chk_ssid']  = session_id();//SESSION変数にidを保存
-//   $_SESSION['kanri_flg'] = $val['kanri_flg'];//SESSION変数に管理者権限のflagを保存
-//   $_SESSION['name']      = $val['name'];//SESSION変数にnameを保存
-//   redirect('select.php');
-// }else{
-//   //Login失敗時(Logout経由)
-//   redirect('login.php');
-// }
-
 if(password_verify($lpw, $val["lpw"])){ //ハッシュ化した際に使う文（パスワードがハッシュにマッチするかどうかを調べる）。暗号の解読関数。第一引数→入力したパスワード、第二引数→hashかされたパスワード
   // if( $val['id'] != "" ){
     //Login成功時
-    $_SESSION['chk_ssid']  = session_id(); //SESSION変数にidを保存
-    $_SESSION['kanri_flg'] = $val['kanri_flg']; //SESSION変数に管理者権限のflagを保存
-    $_SESSION['name']      = $val['name']; //SESSION変数にnameを保存
-    redirect('select2.php');
+    print '認証成功';
+      // $_SESSION['chk_ssid']  = session_id(); //SESSION変数にidを保存
+      // $_SESSION['kanri_flg'] = $val['kanri_flg']; //SESSION変数に管理者権限のflagを保存
+      // $_SESSION['name']      = $val['name']; //SESSION変数にnameを保存
+      // redirect('select2.php');
   }else{
     //Login失敗時(Logout経由)
-    redirect('login2.php');
+    print '認証失敗';
+    // redirect('login2.php');
   }
 
 exit();

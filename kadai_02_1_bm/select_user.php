@@ -5,7 +5,7 @@ session_start();
 //関数を呼び出す
 require_once('funcs2.php');
 //ログインチェック
-loginCheck();
+// loginCheck();
 $user_name = $_SESSION['name'];
 $kanri_flg = $_SESSION['kanri_flg'];
 
